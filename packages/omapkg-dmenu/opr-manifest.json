@@ -1,29 +1,35 @@
 {
-  "requestId": "5f3e6767-c734-44e1-9017-ba5ec914ed1c",
+  "requestId": "69c51f8c-73d5-4ebf-b895-2288c6cc97a1",
   "packageName": "omapkg-dmenu",
   "version": "5.4",
   "sourceKind": "git",
   "sources": [
     {
-      "name": "omapkg-dmenu-7175c4880bac.tar",
-      "url": "https://omapkg.ferreo.dev/sources/29cf5354651547eea9aa76c9fe49afbbb10dbcaaffa895ebea5a1426b9f05bf5.tar",
-      "sha256": "29cf5354651547eea9aa76c9fe49afbbb10dbcaaffa895ebea5a1426b9f05bf5"
+      "name": "omapkg-dmenu-d893c63cdd92.tar",
+      "url": "https://omapkg.ferreo.dev/sources/d8458ddb23ac075f9e6971ac81fdc96a6c19abb1b2f52902d77a22e0f25babd9.tar",
+      "sha256": "d8458ddb23ac075f9e6971ac81fdc96a6c19abb1b2f52902d77a22e0f25babd9"
     }
   ],
   "dependencies": [
+    "glibc",
     "libx11",
     "libxinerama",
     "libxft",
     "fontconfig",
     "freetype2"
   ],
-  "makeDependencies": [],
+  "makeDependencies": [
+    "gcc",
+    "make"
+  ],
   "smokeCommands": [
     "test -x /usr/bin/dmenu",
-    "test -x /usr/bin/dmenu_run",
-    "test -x /usr/bin/dmenu_path",
     "test -x /usr/bin/stest",
-    "out=$(/usr/bin/dmenu -v 2>&1 || true); printf '%s' \"$out\" | grep -q \"5.4\""
+    "test -x /usr/bin/dmenu_path",
+    "test -x /usr/bin/dmenu_run",
+    "test -f /usr/share/man/man1/dmenu.1.gz || test -f /usr/share/man/man1/dmenu.1",
+    "test -f /usr/share/man/man1/stest.1.gz || test -f /usr/share/man/man1/stest.1",
+    "/usr/bin/dmenu -v"
   ],
   "architectures": [
     "x86_64",
@@ -33,11 +39,11 @@
     "x86_64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277",
     "aarch64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:aarch64-2026-09-05@sha256:64443ad82eb0df939d7d9a2ff1ef96317f746e2833bff7bcaa1c892714fb592d"
   },
-  "pkgrel": 2,
-  "sourceDateEpoch": 1727654400,
+  "pkgrel": 3,
+  "sourceDateEpoch": 1704067200,
   "imageDigest": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277",
   "license": "MIT",
   "surface": "binary",
-  "description": "Dynamic menu for X11 that reads newline-separated items from stdin and prints the selection.",
+  "description": "Dynamic menu for X11 that reads newline-separated items from stdin and prints the selected item to stdout.",
   "publicRecipeSha256": null
 }
