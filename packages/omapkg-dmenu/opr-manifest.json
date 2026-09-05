@@ -1,0 +1,46 @@
+{
+  "requestId": "5f3e6767-c734-44e1-9017-ba5ec914ed1c",
+  "packageName": "omapkg-dmenu",
+  "version": "5.4",
+  "sourceKind": "git",
+  "sources": [
+    {
+      "name": "omapkg-dmenu-7175c4880bac.tar",
+      "url": "https://omapkg.ferreo.dev/sources/29cf5354651547eea9aa76c9fe49afbbb10dbcaaffa895ebea5a1426b9f05bf5.tar",
+      "sha256": "29cf5354651547eea9aa76c9fe49afbbb10dbcaaffa895ebea5a1426b9f05bf5"
+    }
+  ],
+  "dependencies": [
+    "libx11",
+    "libxinerama",
+    "libxft",
+    "fontconfig"
+  ],
+  "makeDependencies": [
+    "gcc"
+  ],
+  "smokeCommands": [
+    "test -x /usr/bin/dmenu",
+    "test -x /usr/bin/dmenu_run",
+    "test -x /usr/bin/dmenu_path",
+    "test -x /usr/bin/stest",
+    "/usr/bin/dmenu -v",
+    "test -f /usr/share/man/man1/dmenu.1.gz || test -f /usr/share/man/man1/dmenu.1",
+    "test -f /usr/share/man/man1/stest.1.gz || test -f /usr/share/man/man1/stest.1"
+  ],
+  "architectures": [
+    "x86_64",
+    "aarch64"
+  ],
+  "buildImages": {
+    "x86_64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277",
+    "aarch64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:aarch64-2026-09-05@sha256:64443ad82eb0df939d7d9a2ff1ef96317f746e2833bff7bcaa1c892714fb592d"
+  },
+  "pkgrel": 1,
+  "sourceDateEpoch": 1757030400,
+  "imageDigest": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277",
+  "license": "MIT",
+  "surface": "binary",
+  "description": "Dynamic menu for X11 reading newline-separated items from stdin.",
+  "publicRecipeSha256": null
+}
