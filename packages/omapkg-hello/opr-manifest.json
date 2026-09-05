@@ -1,41 +1,45 @@
 {
-  "requestId": "d86ee801-d676-4948-b5db-2a58098b8156",
+  "requestId": "9a3d633c-0f30-498b-a511-32e43ec31026",
   "packageName": "omapkg-hello",
-  "version": "2.12",
+  "version": "2.12.1",
   "sourceKind": "archive",
   "sources": [
     {
-      "name": "hello-2.12.tar.gz",
-      "url": "https://ftp.gnu.org/gnu/hello/hello-2.12.tar.gz",
-      "sha256": "cf04af86dc085268c5f4470fbae49b18afbc221b78096aab842d934a76bad0ab"
+      "name": "hello-2.12.1.tar.gz",
+      "url": "https://ftp.gnu.org/gnu/hello/hello-2.12.1.tar.gz",
+      "sha256": "8d99142afd92576f30b0cd7cb42a8dc6809998bc5d607d88761f512e26c7db20"
     }
   ],
   "dependencies": [
-    "glibc"
+    "glibc",
+    "gettext"
   ],
   "makeDependencies": [
-    "autoconf",
-    "automake",
+    "gcc",
+    "make",
     "gettext",
-    "help2man"
+    "texinfo"
   ],
   "smokeCommands": [
     "/usr/bin/hello",
+    "/usr/bin/hello --traditional",
+    "/usr/bin/hello --greeting=hi",
     "/usr/bin/hello --version",
-    "/usr/bin/hello --help",
-    "/usr/bin/hello -g 'omapkg smoke'",
-    "test -e /usr/bin/hello"
+    "test -f /usr/share/man/man1/hello.1.gz || test -f /usr/share/man/man1/hello.1"
   ],
   "architectures": [
-    "x86_64"
+    "x86_64",
+    "aarch64"
   ],
   "buildImages": {
-    "x86_64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277"
+    "x86_64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277",
+    "aarch64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:aarch64-2026-09-05@sha256:64443ad82eb0df939d7d9a2ff1ef96317f746e2833bff7bcaa1c892714fb592d"
   },
-  "pkgrel": 6,
-  "sourceDateEpoch": 1644364800,
+  "pkgrel": 1,
+  "sourceDateEpoch": 1653878400,
   "imageDigest": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277",
   "license": "GPL-3.0-or-later",
   "surface": "binary",
+  "description": "GNU Hello prints a friendly, customizable greeting and demonstrates the GNU autotools-based build system.",
   "publicRecipeSha256": null
 }
