@@ -1,0 +1,37 @@
+{
+  "requestId": "69bcde9e-1b2f-4412-a635-aa6aa91434f3",
+  "packageName": "omapkg-nvidia-tools",
+  "version": "610.57.04",
+  "sourceKind": "archive",
+  "sources": [
+    {
+      "name": "NVIDIA-Linux-x86_64-610.57.04.run",
+      "url": "https://download.nvidia.com/XFree86/Linux-x86_64/610.57.04/NVIDIA-Linux-x86_64-610.57.04.run",
+      "sha256": "b2e935c66b83bb00c0c857bc8e0ee0fd52de9286b40c9cc1eec29a7ce7eb116d"
+    }
+  ],
+  "dependencies": [
+    "glibc"
+  ],
+  "makeDependencies": [],
+  "smokeCommands": [
+    "nvidia-smi --help",
+    "test -f /usr/lib/libnvidia-ml.so.610.57.04",
+    "test -L /usr/lib/libnvidia-ml.so.1",
+    "test -L /usr/lib/libnvidia-ml.so",
+    "test -f /usr/share/licenses/omapkg-nvidia-tools/LICENSE"
+  ],
+  "architectures": [
+    "x86_64"
+  ],
+  "buildImages": {
+    "x86_64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277"
+  },
+  "pkgrel": 2,
+  "sourceDateEpoch": 0,
+  "imageDigest": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277",
+  "license": "proprietary",
+  "surface": "recipe",
+  "description": "NVIDIA user-space GPU monitoring tools and NVML shared library extracted from the official Linux .run bundle.",
+  "publicRecipeSha256": null
+}
