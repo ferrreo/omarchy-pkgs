@@ -1,0 +1,44 @@
+{
+  "requestId": "65f59aa3-fe3a-4a4a-bfd5-b32b08b85f25",
+  "packageName": "omapkg-sent",
+  "version": "1",
+  "sourceKind": "git",
+  "sources": [
+    {
+      "name": "omapkg-sent-882d54c225b8.tar",
+      "url": "https://omapkg.ferreo.dev/sources/5efa01158a19c019cfee21afd67c1846ea9b65b530977741d7f375da0c31926b.tar",
+      "sha256": "5efa01158a19c019cfee21afd67c1846ea9b65b530977741d7f375da0c31926b"
+    }
+  ],
+  "dependencies": [
+    "libx11",
+    "libxft",
+    "fontconfig",
+    "freetype2"
+  ],
+  "makeDependencies": [
+    "libx11",
+    "libxft",
+    "fontconfig",
+    "freetype2"
+  ],
+  "smokeCommands": [
+    "test -x /usr/bin/sent",
+    "/usr/bin/sent -v"
+  ],
+  "architectures": [
+    "x86_64",
+    "aarch64"
+  ],
+  "buildImages": {
+    "x86_64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277",
+    "aarch64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:aarch64-2026-09-05@sha256:64443ad82eb0df939d7d9a2ff1ef96317f746e2833bff7bcaa1c892714fb592d"
+  },
+  "pkgrel": 1,
+  "sourceDateEpoch": 1735689600,
+  "imageDigest": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277",
+  "license": "ISC",
+  "surface": "binary",
+  "description": "Simple plaintext presentation tool for X11",
+  "publicRecipeSha256": null
+}
