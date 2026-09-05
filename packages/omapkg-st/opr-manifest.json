@@ -1,0 +1,44 @@
+{
+  "requestId": "4ce979f5-3d95-4426-baa3-9ed213a089b6",
+  "packageName": "omapkg-st",
+  "version": "0.9.3",
+  "sourceKind": "git",
+  "sources": [
+    {
+      "name": "omapkg-st-04ce0d643ed1.tar",
+      "url": "https://omapkg.ferreo.dev/sources/8e1bb35337f2fd69d58df5c25e11c1a75655cd9ea5743362b3c965388bdf11d8.tar",
+      "sha256": "8e1bb35337f2fd69d58df5c25e11c1a75655cd9ea5743362b3c965388bdf11d8"
+    }
+  ],
+  "dependencies": [
+    "libx11",
+    "libxft",
+    "fontconfig",
+    "freetype2"
+  ],
+  "makeDependencies": [
+    "pkgconf",
+    "ncurses"
+  ],
+  "smokeCommands": [
+    "test -x /usr/bin/st",
+    "/usr/bin/st -v",
+    "test -f /usr/share/man/man1/st.1.gz || test -f /usr/share/man/man1/st.1",
+    "test -d /usr/share/terminfo"
+  ],
+  "architectures": [
+    "x86_64",
+    "aarch64"
+  ],
+  "buildImages": {
+    "x86_64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277",
+    "aarch64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:aarch64-2026-09-05@sha256:64443ad82eb0df939d7d9a2ff1ef96317f746e2833bff7bcaa1c892714fb592d"
+  },
+  "pkgrel": 1,
+  "sourceDateEpoch": 1714521600,
+  "imageDigest": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277",
+  "license": "MIT",
+  "surface": "binary",
+  "description": "Simple terminal emulator for X.",
+  "publicRecipeSha256": null
+}
