@@ -1,0 +1,38 @@
+{
+  "requestId": "caba9dc6-ce00-470d-a6f7-9294a84c05cd",
+  "packageName": "omapkg-which",
+  "version": "2.25",
+  "sourceKind": "archive",
+  "sources": [
+    {
+      "name": "which-2.25.tar.gz",
+      "url": "https://ftp.gnu.org/gnu/which/which-2.25.tar.gz",
+      "sha256": "1cb83e4f702e60b8211ab5ec4c2afbab1b1dec80209456a7d2faf7584ed225ea"
+    }
+  ],
+  "dependencies": [],
+  "makeDependencies": [
+    "gcc",
+    "make"
+  ],
+  "smokeCommands": [
+    "/usr/bin/which --version > /dev/null",
+    "/usr/bin/which --help > /dev/null",
+    "/usr/bin/which sh > /dev/null",
+    "/usr/bin/which ls > /dev/null",
+    "test -f /usr/share/man/man1/which.1.gz || test -f /usr/share/man/man1/which.1"
+  ],
+  "architectures": [
+    "x86_64"
+  ],
+  "buildImages": {
+    "x86_64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277"
+  },
+  "pkgrel": 1,
+  "sourceDateEpoch": 1733011200,
+  "imageDigest": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277",
+  "license": "GPL-3.0-or-later",
+  "surface": "binary",
+  "description": "GNU which: print the absolute path of executables found in PATH using bash's search algorithm.",
+  "publicRecipeSha256": null
+}
