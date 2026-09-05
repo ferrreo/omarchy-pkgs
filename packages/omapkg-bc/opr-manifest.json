@@ -1,0 +1,40 @@
+{
+  "requestId": "a4b10f3f-5d00-4947-8209-c05b95c70ec2",
+  "packageName": "omapkg-bc",
+  "version": "1.08.2",
+  "sourceKind": "archive",
+  "sources": [
+    {
+      "name": "bc-1.08.2.tar.gz",
+      "url": "https://ftp.gnu.org/gnu/bc/bc-1.08.2.tar.gz",
+      "sha256": "ae470fec429775653e042015edc928d07c8c3b2fc59765172a330d3d87785f86"
+    }
+  ],
+  "dependencies": [
+    "readline"
+  ],
+  "makeDependencies": [
+    "bison",
+    "flex",
+    "texinfo"
+  ],
+  "smokeCommands": [
+    "test -x /usr/bin/bc",
+    "test -x /usr/bin/dc",
+    "printf '2+2\\n' | /usr/bin/bc | grep -Fxq 4",
+    "printf '4 2 + p\\nq\\n' | /usr/bin/dc | grep -Fxq 6"
+  ],
+  "architectures": [
+    "x86_64"
+  ],
+  "buildImages": {
+    "x86_64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277"
+  },
+  "pkgrel": 1,
+  "sourceDateEpoch": 1717200000,
+  "imageDigest": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277",
+  "license": "GPL-3.0-or-later",
+  "surface": "binary",
+  "description": "GNU bc is an arbitrary-precision calculator language bundled with GNU dc.",
+  "publicRecipeSha256": null
+}
