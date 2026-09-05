@@ -11,18 +11,16 @@
     }
   ],
   "dependencies": [
-    "readline",
-    "ncurses"
+    "readline"
   ],
   "makeDependencies": [
+    "bison",
     "python"
   ],
   "smokeCommands": [
-    "test -x /usr/bin/units",
     "/usr/bin/units --version",
-    "/usr/bin/units -t '1 meter' 'ft'",
-    "test -f /usr/share/units/definitions.units",
-    "test -f /usr/share/licenses/units/COPYING"
+    "printf '1 meter\\nfoot\\n' | /usr/bin/units -q",
+    "test -f /usr/share/licenses/omapkg-units/COPYING"
   ],
   "architectures": [
     "x86_64"
@@ -30,11 +28,11 @@
   "buildImages": {
     "x86_64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277"
   },
-  "pkgrel": 2,
-  "sourceDateEpoch": 1774915200,
+  "pkgrel": 3,
+  "sourceDateEpoch": 1774828800,
   "imageDigest": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277",
   "license": "GPL-3.0-or-later",
   "surface": "binary",
-  "description": "GNU units: command-line unit converter and dimensional calculator with nonlinear and sum-of-units conversions.",
+  "description": "GNU units converts quantities between measurement systems and performs nonlinear conversions with dimensional analysis.",
   "publicRecipeSha256": null
 }
