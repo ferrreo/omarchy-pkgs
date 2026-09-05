@@ -1,5 +1,5 @@
 {
-  "requestId": "69bcde9e-1b2f-4412-a635-aa6aa91434f3",
+  "requestId": "4bdcec78-5e9d-494a-964d-db8c8c4d2000",
   "packageName": "omapkg-nvidia-tools",
   "version": "610.57.04",
   "sourceKind": "archive",
@@ -11,17 +11,19 @@
     }
   ],
   "dependencies": [
-    "glibc",
-    "libgcc",
-    "zlib"
+    "libglvnd",
+    "libx11",
+    "libxext",
+    "libgl",
+    "zlib",
+    "libvulkan.so"
   ],
   "makeDependencies": [],
   "smokeCommands": [
-    "/usr/bin/nvidia-smi --help | head -n 1",
-    "test -x /usr/bin/nvidia-smi",
-    "test -f /usr/lib/libnvidia-ml.so.610.57.04",
-    "test -f /usr/lib/libnvidia-ml.so.1",
-    "test -f /usr/share/licenses/omapkg-nvidia-tools/LICENSE"
+    "/usr/bin/nvidia-smi --version >/dev/null",
+    "test -x /usr/bin/nvidia-modprobe",
+    "test -x /usr/bin/nvidia-xconfig",
+    "ls /usr/lib/libnvidia-ml.so.* >/dev/null"
   ],
   "architectures": [
     "x86_64"
@@ -29,11 +31,11 @@
   "buildImages": {
     "x86_64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277"
   },
-  "pkgrel": 3,
-  "sourceDateEpoch": 0,
+  "pkgrel": 4,
+  "sourceDateEpoch": 1756339200,
   "imageDigest": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277",
   "license": "LicenseRef-NVIDIA-EULA",
   "surface": "recipe",
-  "description": "Proprietary NVIDIA System Management Interface (nvidia-smi) and NVML user-space library, packaged for recipe-only distribution.",
+  "description": "NVIDIA proprietary graphics driver userland tools (nvidia-smi, nvidia-modprobe, nvidia-xconfig) for Linux x86_64.",
   "publicRecipeSha256": null
 }
