@@ -1,13 +1,13 @@
 {
-  "requestId": "9a3d633c-0f30-498b-a511-32e43ec31026",
+  "requestId": "c7acfbcb-d476-4fd8-9f74-118f3ccc5c7d",
   "packageName": "omapkg-hello",
-  "version": "2.12.1",
+  "version": "2.12.3",
   "sourceKind": "archive",
   "sources": [
     {
-      "name": "hello-2.12.1.tar.gz",
-      "url": "https://ftp.gnu.org/gnu/hello/hello-2.12.1.tar.gz",
-      "sha256": "8d99142afd92576f30b0cd7cb42a8dc6809998bc5d607d88761f512e26c7db20"
+      "name": "hello-2.12.3.tar.gz",
+      "url": "https://ftp.gnu.org/gnu/hello/hello-2.12.3.tar.gz",
+      "sha256": "0d5f60154382fee10b114a1c34e785d8b1f492073ae2d3a6f7b147687b366aa0"
     }
   ],
   "dependencies": [
@@ -18,13 +18,14 @@
     "gcc",
     "make",
     "gettext",
+    "autoconf",
+    "automake",
     "texinfo"
   ],
   "smokeCommands": [
-    "/usr/bin/hello",
-    "/usr/bin/hello --traditional",
-    "/usr/bin/hello --greeting=hi",
     "/usr/bin/hello --version",
+    "/usr/bin/hello",
+    "/usr/bin/hello --help",
     "test -f /usr/share/man/man1/hello.1.gz || test -f /usr/share/man/man1/hello.1"
   ],
   "architectures": [
@@ -36,10 +37,10 @@
     "aarch64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:aarch64-2026-09-05@sha256:64443ad82eb0df939d7d9a2ff1ef96317f746e2833bff7bcaa1c892714fb592d"
   },
   "pkgrel": 1,
-  "sourceDateEpoch": 1653878400,
+  "sourceDateEpoch": 1772323200,
   "imageDigest": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:omarchy-stable-2026-09-04@sha256:94e50988d0468bd7d8a02cdfad5caae56d56919948f73da6c1274fa82136e277",
   "license": "GPL-3.0-or-later",
   "surface": "binary",
-  "description": "GNU Hello prints a friendly, customizable greeting and demonstrates the GNU autotools-based build system.",
+  "description": "GNU Hello prints a friendly greeting and serves as a canonical sample of a GNU package, demonstrating standard GNU coding practices.",
   "publicRecipeSha256": null
 }
