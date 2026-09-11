@@ -1,0 +1,33 @@
+{
+  "requestId": "caba9dc6-ce00-470d-a6f7-9294a84c05cd",
+  "packageName": "omapkg-which",
+  "version": "2.25",
+  "sourceKind": "archive",
+  "sources": [
+    {
+      "name": "which-2.25.tar.gz",
+      "url": "https://ftp.gnu.org/gnu/which/which-2.25.tar.gz",
+      "sha256": "1cb83e4f702e60b8211ab5ec4c2afbab1b1dec80209456a7d2faf7584ed225ea"
+    }
+  ],
+  "dependencies": [
+    "glibc"
+  ],
+  "makeDependencies": [],
+  "smokeCommands": [
+    "'/usr/bin/which' --version"
+  ],
+  "architectures": [
+    "x86_64"
+  ],
+  "buildImages": {
+    "x86_64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:discussion-20260909@sha256:563930fe24395649d829761e215377a9a1b99543da97cdee890f19efe50c935a"
+  },
+  "pkgrel": 6,
+  "sourceDateEpoch": 1735689600,
+  "imageDigest": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:discussion-20260909@sha256:563930fe24395649d829761e215377a9a1b99543da97cdee890f19efe50c935a",
+  "license": "GPL-3.0-or-later",
+  "surface": "binary",
+  "description": "GNU utility that prints the full path of executables found in PATH.",
+  "publicRecipeSha256": null
+}
