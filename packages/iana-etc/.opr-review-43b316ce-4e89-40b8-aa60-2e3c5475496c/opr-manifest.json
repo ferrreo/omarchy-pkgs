@@ -1,0 +1,29 @@
+{
+  "requestId": "24c4f972-bfd5-4a44-ad5d-ba45912f8a16",
+  "packageName": "iana-etc",
+  "version": "20260617",
+  "sourceKind": "git",
+  "sources": [],
+  "dependencies": [],
+  "makeDependencies": [],
+  "smokeCommands": [
+    "grep -Eq '^tcp[[:space:]]+6([[:space:]]|$)' /etc/protocols",
+    "grep -Eq '^udp[[:space:]]+17([[:space:]]|$)' /etc/protocols",
+    "grep -Eq '^https[[:space:]]+443/tcp([[:space:]]|$)' /etc/services"
+  ],
+  "architectures": [
+    "aarch64",
+    "x86_64"
+  ],
+  "buildImages": {
+    "aarch64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder@sha256:b1228c8de6e17ec839ea40eed958c4db63d81a6a64c9a5cae7fa634f618ee7b3",
+    "x86_64": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder:discussion-20260909@sha256:563930fe24395649d829761e215377a9a1b99543da97cdee890f19efe50c935a"
+  },
+  "pkgrel": 7,
+  "sourceDateEpoch": 1782052847,
+  "imageDigest": "registry.cloudflare.com/02b05e9d2ce87ca2ccd30cbb50b6eaf3/omarpkg-arch-builder@sha256:b1228c8de6e17ec839ea40eed958c4db63d81a6a64c9a5cae7fa634f618ee7b3",
+  "license": "custom:none",
+  "surface": "binary",
+  "description": "/etc/protocols and /etc/services provided by IANA",
+  "publicRecipeSha256": null
+}
